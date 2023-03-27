@@ -1,0 +1,5 @@
+Warning: I2C(-1, ...) is deprecated, use SoftI2C(...) instead
+Scan i2c bus...
+no i2c device !
+
+
