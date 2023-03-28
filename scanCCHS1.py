@@ -4,6 +4,7 @@
 import machine
 # RPi PICO uses pins 8,9 for sda,scl
 # esp8266 uses pins 4,5
+# esp32 uses pins 6,9
 sda=machine.Pin(4)
 scl=machine.Pin(5)
 i2c=machine.I2C(sda=sda, scl=scl, freq=100000)
