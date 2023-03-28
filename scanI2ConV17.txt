@@ -1,0 +1,19 @@
+>>> %Run -c $EDITOR_CONTENT
+Warning: I2C(-1, ...) is deprecated, use SoftI2C(...) instead
+ets Jun  8 2016 00:22:57
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:5656
+load:0x40078000,len:12696
+load:0x40080400,len:4292
+entry 0x400806b0
+W (54) boot.esp32: PRO CPU has been reset by WDT.
+W (54) boot.esp32: WDT reset info: PRO CPU PC=0x400803c0
+W (56) boot.esp32: WDT reset info: APP CPU PC=0x401cfe92 (waiti mode)
+MicroPython v1.17 on 2021-09-02; ESP32 module with ESP32
+Type "help()" for more information.
+>>> 
+
