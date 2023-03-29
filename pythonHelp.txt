@@ -1,0 +1,52 @@
+So what does this code do? First we need some terminology. Python is an object-oriented language, almost everything in python is a class and when you create an instance of a class you get an object. Classes have methods associated to them. A method (also called a member function) is used to interact with or control the object.
+====
+7. Safe mode and factory reset
+
+If something goes wrong with your pyboard, don’t panic! It is almost impossible for you to break the pyboard by programming the wrong thing.
+
+The first thing to try is to enter safe mode: this temporarily skips execution of boot.py and main.py and gives default USB settings.
+
+====
+https://docs.micropython.org/en/v1.9.3/pyboard/pyboard/tutorial/reset.html
+
+====
+Inline assembler functions are denoted by a special function decorator. Let’s start with the simplest example:
+
+@micropython.asm_thumb
+def fun():
+    movw(r0, 42)
+
+
+====
+https://docs.micropython.org/en/v1.9.3/pyboard/pyboard/tutorial/fading_led.html
+
+====
+
+MicroPython-specific libraries
+
+Functionality specific to the MicroPython implementation is available in the following libraries.
+
+    btree – simple BTree database
+    framebuf — Frame buffer manipulation
+    machine — functions related to the hardware
+    micropython – access and control MicroPython internals
+    network — network configuration
+    uctypes – access binary data in a structured way
+
+
+====
+
+MicroPython-specific libraries
+
+Functionality specific to the MicroPython implementation is available in the following libraries.
+
+    btree – simple BTree database
+    framebuf — Frame buffer manipulation
+    machine — functions related to the hardware
+    micropython – access and control MicroPython internals
+    network — network configuration
+    uctypes – access binary data in a structured way
+
+====
+
+
