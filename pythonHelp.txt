@@ -48,5 +48,65 @@ Functionality specific to the MicroPython implementation is available in the fol
     uctypes – access binary data in a structured way
 
 ====
+How do I use push commands in GitHub?
+Check your branch
 
+    Create and checkout to a new branch from your current commit: git checkout -b [branchname]
+    Then, push the new branch up to the remote: git push -u origin [branchname]
+    
+====
+ https://docs.micropython.org/en/latest/esp32/quickref.html
+ I2C
+ ====
+ from machine import Pin, SoftI2C
+
+i2c = SoftI2C(scl=Pin(5), sda=Pin(4), freq=100000)
+
+i2c.scan()              # scan for devices
+
+i2c.readfrom(0x3a, 4)   # read 4 bytes from device with address 0x3a
+i2c.writeto(0x3a, '12') # write '12' to device with address 0x3a
+
+buf = bytearray(10)     # create a buffer with 10 bytes
+i2c.writeto(0x3a, buf)  # write the given buffer to the peripheral
+
+====
+
+Hardware I2C bus¶
+
+There are two hardware I2C peripherals with identifiers 0 and 1. Any available output-capable pins can be used for SCL and SDA but the defaults are given below.
+
+	
+
+I2C(0)
+	
+
+I2C(1)
+
+scl
+	
+
+18
+	
+
+25
+
+sda
+	
+
+19
+	
+
+26
+
+The driver is accessed via the machine.I2C class and has the same methods as software I2C above:
+
+from machine import Pin, I2C
+
+i2c = I2C(0)
+i2c = I2C(1, scl=Pin(5), sda=Pin(4), freq=400000)
+https://docs.micropython.org/en/latest/esp32/quickref.html
+====
+
+    
 
